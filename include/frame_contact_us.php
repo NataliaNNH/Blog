@@ -12,14 +12,14 @@ if(isset($_POST['submit'])) {
     if (!$_POST['message']) {
         $errMessage = 'Wprowadź wiadomość';
     }
-    if ($human !== 0) {
-        $errHuman = 'Captcha';
+    if ($easycaptcha !== 0) {
+        $erreasycaptcha = 'Captcha';
     }
 } else {
     $errName="";
     $errEmail="";
     $errMessage="";
-    $errHuman="-";
+    $erreasycaptcha="Captcha";
 }
 ?>
 
@@ -29,21 +29,21 @@ if(isset($_POST['submit'])) {
             <div class="form-group">
                 <label for="name" class="col-sm-3 control-label">Imię</label>
                 <div class="col-sm-6 ">
-                    <input type="text" class="form-control" id="name" name="name" placeholder="Imię i nazwisko" >
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Imię i nazwisko" required>
                     <?php echo "<p class='text-danger'>$errName</p>";?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="email" class="col-sm-3 control-label">Email</label>
                 <div class="col-sm-6">
-                    <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="example@gmail.com" required>
                     <?php echo "<p class='text-danger'>$errEmail</p>";?>
                 </div>
             </div>
             <div class="form-group">
                 <label for="message" class="col-sm-3 control-label">Wiadomość</label>
                 <div class="col-sm-6">
-                    <textarea class="form-control" rows="4" name="message"></textarea>
+                    <textarea class="form-control" rows="4" name="message" placeholder="Wpisz wiadomość.." required></textarea>
                     <?php echo "<p class='text-danger'>$errMessage</p>";?>
                 </div>
             </div>
@@ -51,7 +51,7 @@ if(isset($_POST['submit'])) {
                 <label for="human" class="col-sm-3 control-label">2 * 0 = ?</label>
                 <div class="col-sm-6">
                     <input type="text" class="form-control" id="human" name="human" placeholder="odpowiedź">
-                    <?php echo "<p class='human'>$errHuman</p>";?>
+                    <?php echo "<p class='human'>$erreasycaptcha</p>";?>
                 </div>
             </div>
             <div class="form-group">
