@@ -5,28 +5,28 @@
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Nazwa Użytkownika</label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="username" placeholder="Nazwa Użytkownika" name="username">
+                <input type="text" class="form-control" id="username" placeholder="Nazwa Użytkownika" name="username" required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">Imię </label>
             <div class="col-sm-5">
-                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Imię">
+                <input type="text" class="form-control" id="firstname" name="firstname" placeholder="Imię " required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2" for="email">E mail </label>
             <div class="col-sm-5">
-                <input type="email" class="form-control" id="email" placeholder="Email" name="emailid">
+                <input type="email" class="form-control" id="email" placeholder="Email" name="emailid " required>
             </div>
         </div>
 
         <div class="form-group">
             <label class="control-label col-sm-2" for="pwd">Hasło:</label>
             <div class="col-sm-5">
-                <input type="password" class="form-control" id="pwd" placeholder="hasło" name="password">
+                <input type="password" class="form-control" id="pwd" placeholder="hasło" name="password" required>
             </div>
         </div>
 
