@@ -1,8 +1,9 @@
 <?php
 include_once("bootstrap_cdn.php");
+
 ?>
 
-<!-- POSTS -->
+<!-- Posty -->
 
 <div class="container">
     <div class="row">
