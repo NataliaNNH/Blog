@@ -15,11 +15,8 @@ if(isset($_POST['submit'])) {
     $query="SELECT * FROM users WHERE username='$username' OR emailid='$emailid' ";
     $result=mysqli_query($conn , $query);
     $rows=mysqli_num_rows($result);
-
-
     if($rows > 0) {
-        echo "Taki użytkownik juz istnieje. Proszę spróbować ponownie";
-
+        header("location:registeragain.php");
     } else {
         $query="INSERT INTO users_buffer (username, firstname, password, emailid)
 				VALUES ('$username','$firstname','$password','$emailid')";
