@@ -1,0 +1,9 @@
+<?php
+include("../include/url_users.php");
+?>
+<center> Istnieje użytkownik z podanym mailem. Spróbuj ponownie.</center>
+<?php
+include("../include/frame_register.php");
+?>
+
+
