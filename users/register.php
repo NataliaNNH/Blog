@@ -13,7 +13,7 @@ if(isset($_POST['submit'])) {
     /* Sprawdza czy uzytkownik dalej istnieje */
 
 
-    $conn =mysqli_connect("localhost","root","","blog");
+    $conn =mysqli_connect("eu-cdbr-west-02.cleardb.net","b67d3db54acc4f","78247360","@eu-cdbr-west-02.cleardb.net");
     $query="SELECT * FROM users WHERE username='$username'";
     $result=mysqli_query($conn , $query);
     $rows=mysqli_num_rows($result);
