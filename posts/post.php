@@ -18,14 +18,14 @@ if(isset($_REQUEST['id'])) {
         $author=$post['postAuthor'];
         $time=$post['postTime'];
         $shortpost=0;
-        /* increament view by 1 */
+         
         $views=increament_views($id, $author);
 
         include("../include/frame_post.php");
     }
 }
 
-/* post.php?tags=dp */
+ 
 if(isset($_REQUEST['tags'])) {
     $tag=$_REQUEST['tags'];
 
